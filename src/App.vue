@@ -1,13 +1,13 @@
 <template>
   <div>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="# About">About</a></li>
-      <li><a href="#asdf">Broken link</a></li>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/about">About</router-link></li>
+      <li><router-link to="/aboutNot">Not Found</router-link></li>
     </ul>
 
     <div>
-      <component :is="currentView"></component>
+      <router-view></router-view>
     </div>
   </div>
 </template>
